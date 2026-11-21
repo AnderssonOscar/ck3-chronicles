@@ -1,0 +1,1151 @@
+<!doctype html>
+<html lang="en" data-type="software">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Axe and the Wise</title>
+<meta name="description" content="Fifty years of conquest, murder, faith and marriage on the Niger and the Benue, and one lord of far Satsuma who walked out of the story.">
+<meta property="og:title" content="The Axe and the Wise">
+<meta property="og:description" content="Fifty years of conquest, murder, faith and marriage on the Niger and the Benue, and one lord of far Satsuma who walked out of the story.">
+<meta property="og:image" content="assets/art/duel.jpg">
+<meta name="theme-color" content="#120d09">
+<link rel="icon" href="assets/arms/house_12344.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+@font-face { font-family: "King Script"; src: url("assets/fonts/king-script.otf") format("opentype"); font-display: swap; }
+:root {
+  --night: #120d09;
+  --night-2: #1c1510;
+  --night-3: #2a1f17;
+  --vellum: #f1e7d2;
+  --vellum-2: #e7d9bc;
+  --vellum-3: #d8c6a1;
+  --ink: #2b2118;
+  --ink-soft: #5f4e3c;
+  --on-night: #efe4cf;
+  --on-night-soft: #b9a88e;
+  --gold: #c19a4b;
+  --gold-deep: #8f6a24;
+  --blood: #8e2a22;
+  --rule: rgba(43, 33, 24, .18);
+  --rule-night: rgba(239, 228, 207, .16);
+  --display: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+  --body: "EB Garamond", Georgia, "Times New Roman", serif;
+  --script: "King Script", "Cormorant Garamond", serif;
+  --wrap: min(1240px, calc(100vw - 64px));
+  --measure: 64ch;
+  --r: 4px;
+  --ease: cubic-bezier(.2, .7, .2, 1);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--vellum); color: var(--ink); font-family: var(--body); font-size: 20px; line-height: 1.62; font-kerning: normal; font-variant-ligatures: common-ligatures oldstyle-nums; text-rendering: optimizeLegibility; }
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+.wrap { width: var(--wrap); margin-inline: auto; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--gold); color: var(--night); padding: 10px 16px; border-radius: var(--r); text-decoration: none; font-weight: 600; }
+.skip:focus { top: 12px; }
+:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.kicker { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: .22em; text-transform: uppercase; color: var(--gold-deep); margin: 0 0 18px; }
+.on-night .kicker { color: var(--gold); }
+h1, h2, h3, h4 { font-family: var(--display); font-weight: 600; line-height: 1.04; margin: 0; letter-spacing: -.005em; text-wrap: balance; }
+h2 { font-size: clamp(40px, 5.4vw, 76px); }
+h3 { font-size: clamp(36px, 4.6vw, 64px); }
+h4 { font-size: 26px; }
+p { margin: 0 0 1em; }
+.on-night { background: var(--night); color: var(--on-night); }
+
+/* paper: a faint fibrous ground so vellum reads as material, not flat beige */
+.paper { background-color: var(--vellum); background-image:
+  radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.35), transparent 60%),
+  radial-gradient(900px 700px at 100% 100%, rgba(120,84,40,.10), transparent 60%),
+  url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .15  0 0 0 .06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"); }
+
+/* ---------- hero ---------- */
+.hero { position: relative; min-height: 100svh; display: grid; align-items: end; overflow: hidden; color: var(--on-night); background: var(--night); }
+.hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transform: scale(1.06); animation: settle 2.6s var(--ease) forwards; }
+.hero::after { content: ""; position: absolute; inset: 0; background:
+  linear-gradient(180deg, rgba(18,13,9,.55) 0%, rgba(18,13,9,.05) 28%, rgba(18,13,9,.25) 55%, rgba(18,13,9,.94) 88%, var(--night) 100%),
+  radial-gradient(120% 80% at 50% 40%, transparent 40%, rgba(18,13,9,.55) 100%); }
+.hero .kicker { color: var(--gold); text-shadow: 0 1px 12px rgba(0,0,0,.9), 0 0 2px rgba(0,0,0,.8); }
+.hero-in { position: relative; z-index: 2; padding-bottom: clamp(56px, 9vh, 110px); text-align: center; }
+.hero h1 { font-size: clamp(54px, 9.2vw, 148px); line-height: .92; font-weight: 600; letter-spacing: -.015em; text-shadow: 0 2px 30px rgba(0,0,0,.6); }
+.hero h1 em { font-family: var(--script); font-style: normal; font-weight: 400; color: var(--gold); display: block; font-size: .5em; line-height: 1.2; letter-spacing: 0; margin-bottom: .1em; }
+.hero-sub { font-size: clamp(19px, 1.7vw, 24px); font-style: italic; color: var(--on-night-soft); max-width: 46ch; margin: 22px auto 0; }
+.hero-years { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 26px; font-family: var(--display); font-size: 22px; letter-spacing: .3em; color: var(--gold); }
+.hero-years::before, .hero-years::after { content: ""; width: 72px; height: 1px; background: linear-gradient(90deg, transparent, var(--gold)); }
+.hero-years::after { transform: scaleX(-1); }
+.hero-arms { display: flex; justify-content: center; gap: clamp(10px, 2vw, 28px); margin-top: 34px; }
+.hero-arms a { display: block; width: clamp(64px, 7vw, 96px); transition: transform .35s var(--ease), filter .35s; filter: drop-shadow(0 8px 18px rgba(0,0,0,.6)); }
+.hero-arms a:hover { transform: translateY(-4px); filter: drop-shadow(0 12px 22px rgba(0,0,0,.7)) brightness(1.08); }
+.cue { display: inline-flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 34px; font-family: var(--display); font-size: 14px; letter-spacing: .28em; text-transform: uppercase; color: var(--on-night-soft); text-decoration: none; min-height: 44px; }
+.cue span { width: 1px; height: 38px; background: linear-gradient(var(--gold), transparent); animation: drip 2.4s ease-in-out infinite; transform-origin: top; }
+.cue:hover { color: var(--gold); }
+[data-enter] > * { opacity: 0; transform: translateY(18px); animation: rise .9s var(--ease) forwards; }
+[data-enter] > *:nth-child(1) { animation-delay: .25s } [data-enter] > *:nth-child(2) { animation-delay: .45s }
+[data-enter] > *:nth-child(3) { animation-delay: .65s } [data-enter] > *:nth-child(4) { animation-delay: .8s }
+[data-enter] > *:nth-child(5) { animation-delay: .95s } [data-enter] > *:nth-child(6) { animation-delay: 1.1s }
+@keyframes rise { to { opacity: 1; transform: none; } }
+@keyframes settle { to { transform: scale(1); } }
+@keyframes drip { 0% { transform: scaleY(0); opacity: 1 } 70% { transform: scaleY(1); opacity: 1 } 100% { transform: scaleY(1); opacity: 0 } }
+
+/* ---------- book nav ---------- */
+.booknav { position: fixed; top: 0; left: 0; right: 0; z-index: 50; transform: translateY(-110%); transition: transform .45s var(--ease); background: rgba(18,13,9,.86); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--rule-night); color: var(--on-night); }
+.booknav.show { transform: none; }
+.booknav .wrap { display: flex; align-items: center; gap: 8px; height: 60px; }
+.booknav .brand { font-family: var(--display); font-weight: 600; font-size: 19px; margin-right: auto; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-decoration: none; min-height: 44px; display: flex; align-items: center; }
+.booknav a.bk { display: flex; align-items: center; gap: 8px; padding: 0 12px; height: 44px; border-radius: var(--r); text-decoration: none; font-family: var(--display); font-size: 16px; font-weight: 600; color: var(--on-night-soft); transition: color .2s, background .2s; }
+.booknav a.bk img { width: 26px; }
+.booknav a.bk:hover, .booknav a.bk.on { color: var(--on-night); background: rgba(239,228,207,.08); }
+.booknav a.bk.on { box-shadow: inset 0 -2px 0 var(--gold); }
+
+/* ---------- prologue ---------- */
+.prologue { padding: clamp(96px, 12vw, 160px) 0 clamp(80px, 9vw, 120px); }
+.prologue-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); gap: clamp(40px, 6vw, 96px); align-items: start; }
+.prose p { max-width: var(--measure); }
+.prose p.dc::first-letter { font-family: var(--script); float: left; font-size: 4.6em; line-height: .78; padding: .08em .1em 0 0; color: var(--blood); }
+.prologue h2 { margin-bottom: 34px; }
+.personae { border-top: 1px solid var(--rule); }
+.persona { display: grid; grid-template-columns: 76px 1fr; gap: 20px; align-items: center; padding: 22px 0; border-bottom: 1px solid var(--rule); text-decoration: none; transition: transform .3s var(--ease); }
+.persona:hover { transform: translateX(4px); }
+.persona img { width: 76px; filter: drop-shadow(0 6px 10px rgba(43,33,24,.3)); }
+.persona h4 { font-size: 28px; }
+.persona .motto { font-style: italic; color: var(--ink-soft); font-size: 18px; margin: 2px 0 6px; }
+.persona .meta { font-family: var(--display); font-size: 15px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-deep); }
+.persona .meta b { color: var(--ink); font-weight: 600; }
+
+/* ---------- world plate ---------- */
+.world { padding: clamp(80px, 9vw, 120px) 0; }
+.world-head { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 40px; }
+.world-head p { max-width: 44ch; color: var(--on-night-soft); margin: 0; font-style: italic; }
+.plate { position: relative; border-radius: var(--r); overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(193,154,75,.35), 0 0 0 7px var(--night-2), 0 0 0 8px rgba(193,154,75,.25); }
+.plate img.base { width: 100%; height: auto; }
+.mark { position: absolute; transform: translate(-50%, -100%); display: flex; flex-direction: column; align-items: center; text-decoration: none; }
+.mark img { width: clamp(34px, 3.6vw, 56px); filter: drop-shadow(0 6px 10px rgba(0,0,0,.6)); transition: transform .3s var(--ease); }
+.mark span { margin-top: 4px; font-family: var(--display); font-weight: 700; font-size: clamp(12px, 1.1vw, 16px); letter-spacing: .12em; text-transform: uppercase; color: var(--night); background: rgba(241,231,210,.88); padding: 2px 8px; border-radius: 2px; white-space: nowrap; }
+.mark:hover img { transform: translateY(-3px) scale(1.06); }
+
+/* ---------- book cover ---------- */
+.cover { position: relative; min-height: 100svh; display: grid; place-items: center; overflow: hidden; color: var(--on-night); background: var(--night); text-align: center; }
+.cover > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.cover::after { content: ""; position: absolute; inset: 0; background: radial-gradient(70% 70% at 50% 50%, rgba(18,13,9,.55), rgba(18,13,9,.92)), linear-gradient(180deg, transparent 60%, var(--night)); }
+.cover::before { content: ""; position: absolute; inset: 0; z-index: 1; background: var(--house); mix-blend-mode: color; opacity: .35; }
+.cover-in { position: relative; z-index: 2; padding: 96px 0; }
+.cover .numeral { font-family: var(--script); font-size: clamp(30px, 3vw, 44px); color: var(--gold); margin-bottom: 8px; }
+.cover .shield { width: clamp(150px, 15vw, 220px); margin: 0 auto 30px; filter: drop-shadow(0 18px 40px rgba(0,0,0,.7)); }
+.cover h2 { font-size: clamp(48px, 7vw, 104px); }
+.cover .motto { font-style: italic; font-size: clamp(20px, 1.8vw, 26px); color: var(--on-night-soft); margin-top: 18px; }
+.cover .played { margin-top: 30px; font-family: var(--display); letter-spacing: .24em; text-transform: uppercase; font-size: 14px; color: var(--gold); }
+.cover .epigraph { max-width: 40ch; margin: 34px auto 0; font-size: 21px; font-style: italic; color: var(--on-night); opacity: .9; }
+.book-intro { padding: clamp(80px, 9vw, 120px) 0 20px; }
+.book-intro .prose { margin-inline: auto; max-width: var(--measure); }
+
+/* ---------- chapter ---------- */
+.chapter { padding-bottom: clamp(70px, 8vw, 110px); }
+.ch-banner { position: relative; height: min(78svh, 760px); min-height: 460px; overflow: hidden; color: var(--on-night); background: var(--night); }
+.ch-banner img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.4s var(--ease); }
+.ch-banner:hover img { transform: scale(1.025); }
+.ch-banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,13,9,.15) 30%, rgba(18,13,9,.9) 100%); }
+.ch-head { position: absolute; left: 0; right: 0; bottom: 0; z-index: 2; padding-bottom: clamp(36px, 5vw, 64px); }
+.ch-no { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: .3em; text-transform: uppercase; color: var(--gold); display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.ch-no::after { content: ""; width: 60px; height: 1px; background: var(--gold); opacity: .6; }
+.ch-head h3 { font-size: clamp(48px, 6.6vw, 104px); text-shadow: 0 2px 24px rgba(0,0,0,.5); }
+.ch-head h3 em { font-style: italic; font-weight: 500; color: var(--gold); }
+.ch-head .reign { margin-top: 14px; font-size: 20px; color: var(--on-night-soft); font-style: italic; }
+.ch-title { font-family: var(--display); font-size: clamp(26px, 2.6vw, 36px); font-style: italic; font-weight: 500; color: var(--ink-soft); margin: clamp(56px, 6vw, 80px) 0 28px; max-width: 28ch; line-height: 1.15; }
+.ch-body { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: clamp(40px, 6vw, 88px); align-items: start; }
+.figure { margin: 44px 0; position: relative; border-radius: var(--r); overflow: hidden; background: var(--night); box-shadow: 0 20px 50px rgba(43,33,24,.3); }
+.figure img { width: 100%; aspect-ratio: 16/8; object-fit: cover; transition: transform 1s var(--ease); }
+.figure:hover img { transform: scale(1.025); }
+.figure blockquote { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 60px 32px 26px; background: linear-gradient(180deg, transparent, rgba(18,13,9,.92)); color: var(--on-night); font-family: var(--display); font-style: italic; font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; }
+.pull { margin: 46px 0; padding: 6px 0 6px 30px; border-left: 3px solid var(--blood); font-family: var(--display); font-size: clamp(28px, 2.8vw, 38px); font-style: italic; line-height: 1.18; color: var(--ink); max-width: 30ch; }
+
+/* ruler card */
+.card { position: sticky; top: 84px; background: var(--vellum-2); border: 1px solid var(--rule); border-radius: var(--r); padding: 26px; box-shadow: 0 1px 0 rgba(255,255,255,.5) inset, 0 18px 40px rgba(43,33,24,.12); }
+.card-top { display: grid; grid-template-columns: 72px 1fr; gap: 16px; align-items: center; padding-bottom: 18px; border-bottom: 1px solid var(--rule); }
+.card-top img { width: 72px; }
+.card-top h4 { font-size: 27px; line-height: 1.05; }
+.card-top .life { font-size: 16px; color: var(--ink-soft); margin-top: 4px; }
+.card dl { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; margin: 16px 0; font-size: 17px; }
+.card dt { font-family: var(--display); font-weight: 600; letter-spacing: .1em; text-transform: uppercase; font-size: 13px; color: var(--gold-deep); padding-top: 4px; }
+.card dd { margin: 0; }
+.skills { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; padding: 14px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.skill { text-align: center; }
+.skill img { width: 30px; margin: 0 auto 2px; }
+.skill b { font-family: var(--display); font-size: 21px; display: block; line-height: 1; }
+.skill small { font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+.traits { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 4px; }
+.trait { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px 3px 4px; background: rgba(255,255,255,.4); border: 1px solid var(--rule); border-radius: 999px; font-size: 15px; line-height: 1.3; }
+.trait img { width: 26px; height: 26px; }
+.trait.noicon { padding-left: 10px; }
+.tally { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 18px; }
+.tally div { text-align: center; padding: 10px 4px; background: rgba(43,33,24,.06); border-radius: var(--r); }
+.tally b { font-family: var(--display); font-size: 30px; line-height: 1; display: block; color: var(--blood); }
+.tally small { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-soft); }
+
+/* deeds, family, epitaph */
+.ch-foot { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: clamp(40px, 6vw, 88px); margin-top: 40px; }
+.deeds h4, .family h4 { font-size: 15px; font-family: var(--display); letter-spacing: .24em; text-transform: uppercase; color: var(--gold-deep); margin-bottom: 14px; font-weight: 700; }
+.deeds ol { list-style: none; margin: 0; padding: 0; columns: 2; column-gap: 36px; font-size: 16.5px; line-height: 1.38; }
+.deeds li { break-inside: avoid; display: grid; grid-template-columns: 46px 14px 1fr; gap: 8px; padding: 6px 0; border-bottom: 1px dotted var(--rule); }
+.deeds li .y { font-family: var(--display); font-weight: 700; color: var(--ink-soft); }
+.deeds li i { width: 10px; height: 10px; border-radius: 50%; margin-top: 7px; background: var(--ink-soft); }
+.deeds li.pre { opacity: .55; }
+.deeds li[data-k=war] i, .deeds li[data-k=shield] i { background: #8e2a22; }
+.deeds li[data-k=victory] i { background: var(--gold); box-shadow: 0 0 0 2px rgba(193,154,75,.3); }
+.deeds li[data-k=defeat] i { background: #3b2a20; }
+.deeds li[data-k=crown] i { background: var(--gold); border-radius: 2px; transform: rotate(45deg); }
+.deeds li[data-k=death] i { background: #1c1510; }
+.deeds li[data-k=ring] i, .deeds li[data-k=heart] i { background: #b25a6a; }
+.deeds li[data-k=child] i { background: #5e8a5a; }
+.deeds li[data-k=faith] i { background: #2d4f86; }
+.deeds li[data-k=chain] i { background: #6b6b6b; border-radius: 2px; }
+.deeds details { margin-top: 0; }
+.deeds summary { cursor: pointer; list-style: none; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; margin-top: 12px; font-family: var(--display); font-weight: 600; font-size: 17px; letter-spacing: .06em; color: var(--blood); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; }
+.deeds summary::-webkit-details-marker { display: none; }
+.deeds summary:hover { text-decoration-thickness: 2px; }
+.deeds details[open] summary { display: none; }
+.battles { font-size: 16px; color: var(--ink-soft); font-style: italic; margin: 0 0 12px; }
+.family ul { list-style: none; margin: 0 0 22px; padding: 0; font-size: 16.5px; }
+.family li { display: flex; justify-content: space-between; gap: 12px; padding: 5px 0; border-bottom: 1px dotted var(--rule); }
+.family li span:last-child { color: var(--ink-soft); white-space: nowrap; font-variant-numeric: oldstyle-nums; }
+.family li.heir span:first-child::after { content: " · heir"; color: var(--gold-deep); font-style: italic; }
+.family li.murdered span:last-child { color: var(--blood); }
+.epitaph { margin-top: 56px; display: grid; grid-template-columns: 72px 1fr; gap: 24px; align-items: center; padding: 30px 34px; background: var(--night); color: var(--on-night); border-radius: var(--r); box-shadow: 0 24px 50px rgba(18,13,9,.35); }
+.epitaph img { width: 64px; opacity: .9; }
+.epitaph .lbl { font-family: var(--display); letter-spacing: .26em; font-size: 13px; text-transform: uppercase; color: var(--gold); }
+.epitaph p { margin: 6px 0 0; font-family: var(--display); font-size: clamp(22px, 2vw, 28px); font-style: italic; line-height: 1.25; }
+.epitaph .fact { font-family: var(--body); font-style: normal; font-size: 16px; color: var(--on-night-soft); margin-top: 10px; }
+
+/* ---------- realm through the reigns (the scroll moment) ---------- */
+.realm { padding: clamp(80px, 9vw, 120px) 0; }
+.realm-head { margin-bottom: 44px; max-width: 760px; }
+.realm-head p { color: var(--on-night-soft); font-style: italic; margin-top: 16px; }
+.realm-grid { display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(0, 1fr); gap: clamp(32px, 4vw, 64px); }
+.realm-stick { position: sticky; top: 84px; align-self: start; }
+.realm-stack { position: relative; }
+.realm-stack img { width: 100%; height: auto; }
+.realm-stack img + img { position: absolute; inset: 0; }
+.realm-stack img { opacity: 0; transition: opacity .9s var(--ease); }
+.realm-stack img.on { opacity: 1; }
+.realm-steps { padding: 6vh 0 30vh; }
+.step { min-height: 62vh; display: flex; flex-direction: column; justify-content: center; opacity: .35; transition: opacity .5s; }
+.step.on { opacity: 1; }
+.step .d { font-family: var(--display); letter-spacing: .24em; text-transform: uppercase; font-size: 14px; color: var(--gold); }
+.step h4 { font-size: clamp(30px, 3vw, 44px); margin: 8px 0 12px; }
+.step p { color: var(--on-night-soft); margin: 0; font-size: 19px; }
+.step .n { font-family: var(--display); font-size: 64px; line-height: 1; color: var(--on-night); margin-top: 18px; }
+.step .n small { font-size: 15px; letter-spacing: .2em; text-transform: uppercase; color: var(--on-night-soft); margin-left: 8px; }
+
+/* ---------- interlude ---------- */
+.interlude { position: relative; padding: clamp(110px, 12vw, 170px) 0; overflow: hidden; color: var(--on-night); background: var(--night); }
+.interlude > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: .6; }
+.interlude::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, var(--night) 20%, rgba(18,13,9,.7) 50%, rgba(18,13,9,.2) 85%, rgba(18,13,9,.45)); }
+.interlude .wrap { position: relative; z-index: 2; }
+.duo { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; }
+.duo img { width: 74px; filter: drop-shadow(0 10px 20px rgba(0,0,0,.6)); }
+.duo i { width: 40px; height: 1px; background: var(--gold); }
+.interlude h3 { max-width: 16ch; margin-bottom: 30px; }
+.interlude .prose p { color: var(--on-night); opacity: .92; }
+.interlude .prose p.dc::first-letter { color: var(--gold); }
+
+/* ---------- epilogue ---------- */
+.epilogue-top { position: relative; min-height: 86svh; display: grid; align-items: end; overflow: hidden; color: var(--on-night); background: var(--night); }
+.epilogue-top > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.epilogue-top::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(18,13,9,.2), rgba(18,13,9,.92) 85%); }
+.epilogue-top .wrap { position: relative; z-index: 2; padding-bottom: clamp(56px, 8vw, 96px); }
+.epilogue-text { padding: clamp(80px, 9vw, 120px) 0; }
+.epilogue-text .prose { max-width: var(--measure); margin-inline: auto; }
+.awards { padding: clamp(80px, 9vw, 120px) 0; }
+.awards h2 { margin-bottom: 44px; }
+.award-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.award { position: relative; padding: 30px 28px 28px; background: var(--night-2); border: 1px solid var(--rule-night); border-radius: var(--r); transition: transform .3s var(--ease), border-color .3s; }
+.award:hover { transform: translateY(-2px); border-color: rgba(193,154,75,.55); }
+.award img { width: 58px; margin-bottom: 18px; filter: drop-shadow(0 8px 14px rgba(0,0,0,.5)); }
+.award .t { font-family: var(--display); font-size: 30px; font-weight: 600; line-height: 1.05; color: var(--gold); }
+.award .w { font-family: var(--display); font-size: 19px; font-style: italic; margin: 6px 0 12px; }
+.award p { color: var(--on-night-soft); font-size: 17px; line-height: 1.5; margin: 0; }
+.ledger { padding: 0 0 clamp(80px, 9vw, 120px); }
+.ledger h3 { font-size: clamp(30px, 3vw, 42px); margin-bottom: 26px; }
+.ledger-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 18px; min-width: 640px; }
+th { font-family: var(--display); letter-spacing: .16em; text-transform: uppercase; font-size: 13px; color: var(--gold); text-align: right; font-weight: 600; padding: 12px 10px; border-bottom: 1px solid var(--rule-night); }
+th:first-child, td:first-child { text-align: left; }
+td { padding: 14px 10px; border-bottom: 1px solid var(--rule-night); text-align: right; font-variant-numeric: lining-nums tabular-nums; }
+td .h { display: flex; align-items: center; gap: 12px; font-family: var(--display); font-size: 22px; font-weight: 600; }
+td .h img { width: 36px; }
+td .st { font-style: italic; color: var(--on-night-soft); font-size: 16px; }
+footer { padding: 56px 0 64px; border-top: 1px solid var(--rule-night); color: var(--on-night-soft); font-size: 15px; }
+footer .wrap { display: flex; justify-content: space-between; gap: 30px; flex-wrap: wrap; }
+
+/* ---------- responsive ---------- */
+@media (max-width: 1100px) {
+  .ch-body, .ch-foot { grid-template-columns: minmax(0, 1fr) 320px; }
+}
+@media (max-width: 900px) {
+  :root { --wrap: calc(100vw - 48px); }
+  body { font-size: 19px; }
+  .prologue-grid, .ch-body, .ch-foot, .realm-grid { grid-template-columns: minmax(0, 1fr); }
+  .deeds li { grid-template-columns: 40px 12px minmax(0, 1fr); }
+  .deeds li span:last-child, .family li span:first-child { overflow-wrap: anywhere; }
+  .card { position: static; }
+  .award-grid { grid-template-columns: 1fr 1fr; }
+  .world-head { flex-direction: column; align-items: start; }
+  .realm-stick { top: 60px; z-index: 3; background: var(--night); padding-bottom: 10px; }
+  .step { min-height: 46vh; }
+  .booknav .bk:not(.bk-text) span { display: none; }
+  .booknav .brand { display: none; }
+  .booknav .wrap { justify-content: center; }
+}
+@media (max-width: 600px) {
+  :root { --wrap: calc(100vw - 32px); }
+  body { font-size: 18px; }
+  .deeds ol { columns: 1; }
+  .award-grid { grid-template-columns: 1fr; }
+  .skills { grid-template-columns: repeat(3, 1fr); row-gap: 12px; }
+  .booknav .brand { font-size: 16px; }
+  .booknav a.bk { padding: 0 8px; }
+  .mark span { display: none; }
+  .epitaph { grid-template-columns: 1fr; padding: 24px; }
+  .ch-banner { min-height: 420px; height: 70svh; }
+  .figure img { aspect-ratio: 4/3; }
+  .figure blockquote { position: static; background: var(--night); padding: 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+  [data-enter] > * { opacity: 1; transform: none; }
+  .hero-img { transform: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#prologue">Skip to the chronicle</a>
+
+<nav class="booknav" aria-label="Books of the chronicle">
+  <div class="wrap">
+    <a class="brand" href="#top">The Axe and the Wise</a>
+    <a class="bk" href="#book-1" data-book="book-1"><img src="assets/arms/house_3764.png" alt=""><span>Sorogoye</span></a><a class="bk" href="#book-2" data-book="book-2"><img src="assets/arms/house_3713.png" alt=""><span>Nri</span></a><a class="bk" href="#book-3" data-book="book-3"><img src="assets/arms/house_12344.png" alt=""><span>Satsuma</span></a>
+    <a class="bk bk-text" href="#epilogue" data-book="epilogue"><span>Epilogue</span></a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <img class="hero-img" src="assets/art/duel.jpg" alt="">
+  <div class="hero-in wrap" data-enter>
+    <p class="kicker">Crusader Kings III · A chronicle of three houses</p>
+    <h1><em>The Chronicle of</em>The Axe and the Wise</h1>
+    <p class="hero-sub">Fifty years of conquest, murder, faith and marriage on the Niger and the Benue, and one lord of far Satsuma who walked out of the story.</p>
+    <p class="hero-years">1066&ndash;1117</p>
+    <div class="hero-arms"><a href="#book-1" aria-label="Book I: Sorogoye"><img src="assets/arms/house_3764.png" alt="Arms of Sorogoye"></a><a href="#book-2" aria-label="Book II: Nri"><img src="assets/arms/house_3713.png" alt="Arms of Nri"></a><a href="#book-3" aria-label="Book III: Satsuma"><img src="assets/arms/house_12344.png" alt="Arms of Satsuma"></a></div>
+    <a class="cue" href="#prologue">Begin the chronicle<span></span></a>
+  </div>
+</header>
+
+<main>
+<section class="prologue paper" id="prologue">
+  <div class="wrap prologue-grid">
+    <div class="prose">
+      <p class="kicker">Prologue</p>
+      <h2>Three lords take up the game</h2>
+      <p class="dc">In the autumn of the year 1070, three men were given the threads of three houses and told to pull. One sat in the hot red country south of the Sahara, master of a few Mandé villages and a war band. One ruled the Igbo forests where the Niger breaks into a hundred mouths. The third lived at the far edge of the world, in Satsuma, at the southern tip of Japan, where the sea smells of volcanic ash.</p><p>None of them knew yet what the others would become. The chronicler did not know either. He wrote down what happened, and fifty years of it follows: who was crowned, who was buried, which children lived, and which did not.</p><p>Two of these houses would grow into kingdoms. One of them would bring the other to the altar. And one lord would simply stop answering, his house drifting on without him like a boat whose rower has gone to sleep.</p>
+    </div>
+    <div>
+      <p class="kicker">The houses</p>
+      <div class="personae">
+      
+        <a class="persona" href="#book-1">
+          <img src="assets/arms/house_3764.png" alt="">
+          <div>
+            <h4>House Sorogoye</h4>
+            <p class="motto">&ldquo;With the Axe, I Seek Splendor&rdquo;</p>
+            <div class="meta"><b>Kong</b> &middot; 2 rulers &middot; played by the Lord of Kong</div>
+          </div>
+        </a>
+      
+        <a class="persona" href="#book-2">
+          <img src="assets/arms/house_3713.png" alt="">
+          <div>
+            <h4>House Nri</h4>
+            <p class="motto">&ldquo;Be Wise&rdquo;</p>
+            <div class="meta"><b>Igbo-Benue</b> &middot; 3 rulers &middot; played by Vicarius Christi</div>
+          </div>
+        </a>
+      
+        <a class="persona" href="#book-3">
+          <img src="assets/arms/house_12344.png" alt="">
+          <div>
+            <h4>House Satsuma</h4>
+            <p class="motto">&ldquo;Through Fidelity, Eternal Renown&rdquo;</p>
+            <div class="meta"><b>Satsuma</b> &middot; 1 ruler &middot; played by YeaYa</div>
+          </div>
+        </a>
+      
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="world on-night" aria-labelledby="world-h">
+  <div class="wrap">
+    <div class="world-head">
+      <div><p class="kicker">The known world, 1117</p><h2 id="world-h">Three banners on one map</h2></div>
+      <p>Two neighbouring realms in West Africa, and a single speck of red on the southern tip of Japan.</p>
+    </div>
+    <div class="plate">
+      <img class="base" src="assets/maps/world.jpg" alt="Parchment map of the world with the realms of the played houses marked" width="2400" height="1200" loading="lazy">
+      <a class="mark" href="#book-1" style="left: 85.88%; top: 44.21%"><img src="assets/arms/house_12344.png" alt=""><span>Satsuma</span></a><a class="mark" href="#book-2" style="left: 6.51%; top: 79.86%"><img src="assets/arms/house_3764.png" alt=""><span>Sorogoye</span></a><a class="mark" href="#book-3" style="left: 17.37%; top: 83.98%"><img src="assets/arms/house_3713.png" alt=""><span>Nri</span></a>
+    </div>
+  </div>
+</section>
+
+
+<section class="cover" id="book-1" style="--house: #9b2d24" data-booksec="book-1">
+  <img src="assets/art/ep2_feast_sub_saharan.jpg" alt="" loading="lazy">
+  <div class="cover-in wrap">
+    <p class="numeral">Book I</p>
+    <img class="shield" src="assets/arms/house_3764.png" alt="Arms of House Sorogoye">
+    <h2>The Book of Sorogoye</h2>
+    <p class="motto">&ldquo;With the Axe, I Seek Splendor&rdquo;</p>
+    <p class="epigraph">A one-legged man cannot run from a war. So he decided to win all of them.</p>
+    <p class="played">Played by the Lord of Kong</p>
+  </div>
+</section>
+
+<div class="paper" data-booksec="book-1">
+
+<section class="book-intro"><div class="wrap"><div class="prose"><p class="dc">The Sorogoye were Bozo river people, fishermen's stock, with a lizard on their shield and a boast for a motto: <em>with the axe, I seek splendour.</em> In 1070 they held a scrap of land around Bobo and nothing more. Their name meant nothing in Mali, less in Ghana, and nothing at all beyond the desert.</p><p>Two generations later they ruled three kingdoms. This is how.</p></div></div></section>
+
+
+
+<article class="chapter" id="ch-1">
+  <div class="ch-banner">
+    <img src="assets/art/baghdad.jpg" alt="" loading="lazy">
+    <div class="ch-head"><div class="wrap">
+      <p class="ch-no">Chapter 1</p>
+      <h3>Yatabéri <em>the Lame Lion</em></h3>
+      <p class="reign">Reigned 23 September 1070 &ndash; 31 December 1112 &middot; 42 years</p>
+    </div></div>
+  </div>
+  <div class="wrap">
+    <p class="ch-title">Nineteen wars, and one he could not win</p>
+    <div class="ch-body">
+      <div class="prose">
+        
+          <p class="dc">Yatabéri was twenty-eight when the chronicle finds him. He was already a brilliant strategist, already wrathful and impatient, already the kind of man who took losing as a personal insult. He had lost exactly once, at Gao in 1067, to Nintasanay of Zuwa, and spent the following year beating the warlord Dalante of Hain in three straight battles, as if to settle the account.</p>
+          
+          
+        
+          <p>On the first day of the game he declared war. On 24 September 1070 his spears went north against Kouka of Madare, and by midsummer 1072 Sikasso was his. Biranin of Tunkara came at him while his back was turned and was beaten in two battles. Longesai of Bwa lost Tyendugu and ended up in Yatabéri's cell. In April 1074 he gathered the conquered counties under one banner and <strong>proclaimed the Duchy of Bobo.</strong></p>
+          
+          
+        
+          <p>Then he simply kept going. Kabarasana in 1078. Bindugu, when Dalante of Hain tried his luck again and was taken prisoner for it. Dodugu in 1080. When the peasants of Kisha of Jawara rose against him in 1083 he crushed them in one battle and chained their leader the same week. The only war he ever lost came in 1085, when Kodama of Konyan tore Kabarasana away while his armies were busy taking Nyene. He took Nyene anyway.</p>
+          
+          
+        
+          <p>In August 1089 he broke Bisi the Compassionate, seized the Duchy of Kong, and in October <strong>raised it into a kingdom.</strong> The fisherman's grandson was a king. He had set aside his wife of twenty-two years, Nana, the winter before; she died in 1092 when her brittle bones gave way beneath her. The new king married Tere of Busuma, a girl thirty-four years his junior, and in May 1095 a son was born to him who would inherit everything: <strong>Gassama.</strong></p>
+          
+          
+            <blockquote class="pull">He kept riding to war on one leg.</blockquote>
+          
+        
+          <p>Worodugu, Bena, Kru, Lobi, Wenyon, Bassa: the lands fell one after another, almost one a year, and the names of beaten men piled up in the court books. Somewhere in those years Yatabéri lost a leg. The chronicle does not say where. He kept riding to war on one.</p>
+          
+          
+        
+          <p>Then came Jolof. In November 1104 Yatabéri travelled to watch Maysa of Jolof crowned, and five days later Maysa declared a holy war on him. Ten days after that, on 13 December, the old warlord <strong>converted to Islam</strong>, Maliki rite, and kept fighting. Whether it was faith or tactics, it didn't help Maysa: in 1107 Yatabéri won the war for Jenne, then turned around and declared one of his own. In January 1109 Maysa knelt, and the <strong>Kingdom of Takrūr</strong> became a vassal of Kong.</p>
+          
+            <figure class="figure"><img src="assets/art/mosque.jpg" alt="" loading="lazy"><blockquote>Five days after the coronation, Jolof declared a holy war. Ten days after that, the old warlord knelt in a mosque.</blockquote></figure>
+          
+          
+        
+          <p>He invaded Mali in 1110 and won that too, making a rival of its king. He declared two more wars in the autumn of 1112, at seventy years old. On the last day of that year, 31 December 1112, his old heart finally stopped. He died in his bed, of old age, which nobody who had met him on a battlefield would have bet on.</p>
+          
+          
+        
+      </div>
+      <aside class="card" aria-label="Yatabéri at a glance">
+        <div class="card-top">
+          <img src="assets/arms/house_3764.png" alt="">
+          <div><h4>Yatabéri</h4><div class="life">1042 &ndash; 1112 &middot; died at 70</div></div>
+        </div>
+        <dl>
+          
+          <dt>Faith</dt><dd>Maliki</dd>
+          <dt>Titles</dt><dd>Kong, Takrūr, Kaabu, Bobo</dd>
+        </dl>
+        <div class="skills"><div class="skill" title="Diplomacy"><img src="assets/icons/icon_skills.png" alt=""><b>5</b><small>Dip</small></div><div class="skill" title="Martial"><img src="assets/icons/icon_skill_martial.png" alt=""><b>7</b><small>Mar</small></div><div class="skill" title="Stewardship"><img src="assets/icons/icon_skill_stewardship.png" alt=""><b>10</b><small>Ste</small></div><div class="skill" title="Intrigue"><img src="assets/icons/icon_skill_intrigue.png" alt=""><b>2</b><small>Int</small></div><div class="skill" title="Learning"><img src="assets/icons/icon_skill_learning.png" alt=""><b>7</b><small>Lea</small></div><div class="skill" title="Prowess"><img src="assets/icons/icon_prowess.png" alt=""><b>4</b><small>Pro</small></div></div>
+        <div class="traits"><span class="trait"><img src="assets/icons/traits_wrathful.png" alt="">Wrathful</span><span class="trait"><img src="assets/icons/traits_impatient.png" alt="">Impatient</span><span class="trait"><img src="assets/icons/traits_diligent.png" alt="">Diligent</span><span class="trait"><img src="assets/icons/traits_education_martial_4.png" alt="">Brilliant Strategist</span><span class="trait"><img src="assets/icons/traits_strategist.png" alt="">Strategist</span><span class="trait"><img src="assets/icons/traits_hunter.png" alt="">Hunter</span><span class="trait"><img src="assets/icons/traits_reveler.png" alt="">Reveler</span><span class="trait"><img src="assets/icons/traits_reaver.png" alt="">Pillager</span><span class="trait"><img src="assets/icons/traits_athletic.png" alt="">Athletic</span><span class="trait"><img src="assets/icons/traits_one_legged.png" alt="">One-Legged</span><span class="trait"><img src="assets/icons/traits_faltering_heart.png" alt="">Faltering Heart</span></div>
+        <div class="tally">
+          <div><b>20</b><small>Wars won</small></div>
+          <div><b>34</b><small>Battles won</small></div>
+          <div><b>9</b><small>Children</small></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ch-foot">
+      <div class="deeds">
+        <h4>Deeds of the reign</h4>
+        <p class="battles">34 battles won, 1 lost; 3 enemies taken prisoner.</p>
+        
+        <ol><li data-k="ring" class="pre"><span class="y">1066</span><i></i><span>Married Nana</span></li><li data-k="war" class=""><span class="y">1070</span><i></i><span>Declared war on Kouka of Madare for the County of Sikasso</span></li><li data-k="child" class=""><span class="y">1071</span><i></i><span>Birth of Nana</span></li><li data-k="shield" class=""><span class="y">1072</span><i></i><span>Attacked by Biranin of Tunkara</span></li><li data-k="victory" class=""><span class="y">1072</span><i></i><span>Victory over Kouka of Madare &mdash; the County of Sikasso won</span></li><li data-k="crown" class=""><span class="y">1072</span><i></i><span>Seized the County of Sikasso from Kouka of Madare</span></li><li data-k="victory" class=""><span class="y">1073</span><i></i><span>Victory over Biranin of Tunkara</span></li><li data-k="war" class=""><span class="y">1073</span><i></i><span>Declared war on Longesai of Bwa for the County of Tyendugu</span></li><li data-k="chain" class=""><span class="y">1074</span><i></i><span>Threw Longesai of Bwa into a cell</span></li><li data-k="victory" class=""><span class="y">1074</span><i></i><span>Victory over Longesai of Bwa &mdash; the County of Tyendugu won</span></li><li data-k="crown" class=""><span class="y">1074</span><i></i><span>Seized the County of Tyendugu from Longesai of Bwa</span></li><li data-k="crown" class=""><span class="y">1074</span><i></i><span>Proclaimed the Duchy of Bobo</span></li><li data-k="war" class=""><span class="y">1075</span><i></i><span>Declared war on Bannu of Kabarasana for the County of Kabarasana</span></li><li data-k="book" class=""><span class="y">1075</span><i></i><span>Finished educating Halima</span></li></ol>
+        
+        <details><summary>Read all 87 deeds</summary>
+          <ol><li data-k="shield" class=""><span class="y">1076</span><i></i><span>Attacked by Dalante of Hain, who wanted the County of Bindugu</span></li><li data-k="chain" class=""><span class="y">1077</span><i></i><span>Threw Dalante of Hain into a cell</span></li><li data-k="victory" class=""><span class="y">1077</span><i></i><span>Victory over Dalante of Hain</span></li><li data-k="victory" class=""><span class="y">1078</span><i></i><span>Victory over Bannu of Kabarasana &mdash; the County of Kabarasana won</span></li><li data-k="war" class=""><span class="y">1079</span><i></i><span>Declared war on Dalante of Hain for the County of Dodugu</span></li><li data-k="victory" class=""><span class="y">1080</span><i></i><span>Victory over Dalante of Hain &mdash; the County of Dodugu won</span></li><li data-k="ally" class=""><span class="y">1080</span><i></i><span>Marched to aid Tunka Menin of Cisse against Nintasanay of Zuwa</span></li><li data-k="crown" class=""><span class="y">1081</span><i></i><span>Attended the coronation of Lahilatoul Kalabi of Keita</span></li><li data-k="crown" class=""><span class="y">1081</span><i></i><span>Attended the coronation of Lahilatoul Kalabi of Keita</span></li><li data-k="child" class=""><span class="y">1082</span><i></i><span>Birth of Nafissa</span></li><li data-k="shield" class=""><span class="y">1083</span><i></i><span>Attacked by Kisha of Jawara</span></li><li data-k="chain" class=""><span class="y">1083</span><i></i><span>Threw Kisha of Jawara into a cell</span></li><li data-k="victory" class=""><span class="y">1083</span><i></i><span>Victory over Kisha of Jawara</span></li><li data-k="war" class=""><span class="y">1084</span><i></i><span>Declared war on Sikam of Wule for the County of Nyene</span></li><li data-k="shield" class=""><span class="y">1084</span><i></i><span>Attacked by Kodama of Konyan, who wanted the County of Kabarasana</span></li><li data-k="defeat" class=""><span class="y">1085</span><i></i><span>Defeated by Kodama of Konyan &mdash; the County of Kabarasana lost</span></li><li data-k="victory" class=""><span class="y">1085</span><i></i><span>Victory over Sikam of Wule &mdash; the County of Nyene won</span></li><li data-k="book" class=""><span class="y">1087</span><i></i><span>Finished educating Nana</span></li><li data-k="war" class=""><span class="y">1088</span><i></i><span>Declared war on Bisi the Compassionate of Dyula for the Duchy of Kong</span></li><li data-k="broken" class=""><span class="y">1088</span><i></i><span>Set aside Nana</span></li><li data-k="victory" class=""><span class="y">1089</span><i></i><span>Victory over Bisi the Compassionate of Dyula &mdash; the Duchy of Kong won</span></li><li data-k="crown" class=""><span class="y">1089</span><i></i><span>Usurped the Duchy of Kong from Bisi the Compassionate of Dyula</span></li><li data-k="crown" class=""><span class="y">1089</span><i></i><span>Proclaimed the Kingdom of Kong</span></li><li data-k="war" class=""><span class="y">1090</span><i></i><span>Declared war on Wule of Wuro for the Duchy of Worodugu</span></li><li data-k="victory" class=""><span class="y">1091</span><i></i><span>Victory over Wule of Wuro &mdash; the Duchy of Worodugu won</span></li><li data-k="war" class=""><span class="y">1091</span><i></i><span>Swore an oath of conquest</span></li><li data-k="war" class=""><span class="y">1092</span><i></i><span>Declared war on Ewunio of Fing for the County of Bena</span></li><li data-k="ring" class=""><span class="y">1093</span><i></i><span>Married Tere of Busuma</span></li><li data-k="victory" class=""><span class="y">1093</span><i></i><span>Victory over Ewunio of Fing &mdash; the County of Bena won</span></li><li data-k="rival" class=""><span class="y">1093</span><i></i><span>Rivalry with Ewunio of Fing</span></li><li data-k="war" class=""><span class="y">1093</span><i></i><span>Declared war on Konowa of Kwene for the Duchy of Kru</span></li><li data-k="child" class=""><span class="y">1094</span><i></i><span>A child born too soon</span></li><li data-k="victory" class=""><span class="y">1094</span><i></i><span>Victory over Konowa of Kwene &mdash; the Duchy of Kru won</span></li><li data-k="war" class=""><span class="y">1095</span><i></i><span>Declared war on Bisi the Compassionate of Dyula for the Duchy of Lobi</span></li><li data-k="child" class=""><span class="y">1095</span><i></i><span>Birth of Gassama</span></li><li data-k="ally" class=""><span class="y">1095</span><i></i><span>Marched to aid Yamba Sorgo the Evil of Busuma against Ermanala the Shy of Mekrou</span></li><li data-k="child" class=""><span class="y">1096</span><i></i><span>Birth of Sidibé</span></li><li data-k="victory" class=""><span class="y">1096</span><i></i><span>Victory over Bisi the Compassionate of Dyula &mdash; the Duchy of Lobi won</span></li><li data-k="war" class=""><span class="y">1096</span><i></i><span>Declared war on Pereko of Abron for the Duchy of Kong</span></li><li data-k="shield" class=""><span class="y">1097</span><i></i><span>Attacked by Biranin of Tunkara, who wanted the County of Dodugu</span></li><li data-k="victory" class=""><span class="y">1097</span><i></i><span>Victory over Pereko of Abron &mdash; the Duchy of Kong won</span></li><li data-k="book" class=""><span class="y">1098</span><i></i><span>Finished educating Nafissa</span></li><li data-k="victory" class=""><span class="y">1098</span><i></i><span>Victory over Niakhata the Timid of Tunkara</span></li><li data-k="child" class=""><span class="y">1099</span><i></i><span>Birth of Tekhaye</span></li><li data-k="book" class=""><span class="y">1099</span><i></i><span>Finished educating Djire</span></li><li data-k="ally" class=""><span class="y">1100</span><i></i><span>Marched to aid Ènweleána of Nri against Zagula the Scribe of Jukun</span></li><li data-k="war" class=""><span class="y">1101</span><i></i><span>Declared war on Lami the Miser of Kren for the Duchy of Wenyon</span></li><li data-k="ally" class=""><span class="y">1102</span><i></i><span>Friendship with Ènweleána of Nri</span></li><li data-k="child" class=""><span class="y">1102</span><i></i><span>Birth of Mari-Djata</span></li><li data-k="victory" class=""><span class="y">1102</span><i></i><span>Victory over Lami the Miser of Kren &mdash; the Duchy of Wenyon won</span></li><li data-k="war" class=""><span class="y">1103</span><i></i><span>Declared war on Wamah the Shy of Toma for the Duchy of Bassa</span></li><li data-k="victory" class=""><span class="y">1104</span><i></i><span>Victory over Wamah the Shy of Toma &mdash; the Duchy of Bassa won</span></li><li data-k="crown" class=""><span class="y">1104</span><i></i><span>Attended the coronation of Maysa of Jolof</span></li><li data-k="shield" class=""><span class="y">1104</span><i></i><span>Attacked by Maysa of Jolof, who wanted the Kingdom of Kong</span></li><li data-k="faith" class=""><span class="y">1104</span><i></i><span>Converted from Bidaism to Sunni</span></li><li data-k="shield" class=""><span class="y">1105</span><i></i><span>Attacked by Maysa of Jolof, who wanted the Duchy of Jenne</span></li><li data-k="victory" class=""><span class="y">1107</span><i></i><span>Victory over Maysa of Jolof</span></li><li data-k="war" class=""><span class="y">1107</span><i></i><span>Declared war on Maysa of Jolof</span></li><li data-k="death" class=""><span class="y">1107</span><i></i><span>Lost a friend: Ènweleána of Nri</span></li><li data-k="ring" class=""><span class="y">1107</span><i></i><span>Married Lorane</span></li><li data-k="victory" class=""><span class="y">1109</span><i></i><span>Victory over Maysa of Jolof</span></li><li data-k="crown" class=""><span class="y">1109</span><i></i><span>Maysa of Jolof bent the knee &mdash; the Kingdom of Takrūr joins the realm</span></li><li data-k="ring" class=""><span class="y">1109</span><i></i><span>Married Kumba of Galavy</span></li><li data-k="child" class=""><span class="y">1109</span><i></i><span>Birth of Kadi</span></li><li data-k="war" class=""><span class="y">1110</span><i></i><span>Declared war on Lahilatoul Kalabi of Keita for the Kingdom of Mali</span></li><li data-k="victory" class=""><span class="y">1110</span><i></i><span>Victory over Lahilatoul Kalabi of Keita &mdash; the Kingdom of Mali won</span></li><li data-k="rival" class=""><span class="y">1110</span><i></i><span>Rivalry with Lahilatoul Kalabi of Keita</span></li><li data-k="book" class=""><span class="y">1111</span><i></i><span>Finished educating Gassama</span></li><li data-k="ally" class=""><span class="y">1111</span><i></i><span>Marched to aid Yamba Sorgo the Evil of Busuma against Bawo of Gobirawa</span></li><li data-k="war" class=""><span class="y">1112</span><i></i><span>Declared war on Wubri of Ninise for the Duchy of Yatenga</span></li><li data-k="war" class=""><span class="y">1112</span><i></i><span>Declared war on Agor the Accursed of Minianka for the Duchy of Lobi</span></li><li data-k="broken" class=""><span class="y">1112</span><i></i><span>Set aside Kumba of Galavy</span></li><li data-k="broken" class=""><span class="y">1112</span><i></i><span>Set aside Lorane</span></li></ol>
+        </details>
+        
+      </div>
+      <div class="family">
+        <h4>Spouses</h4><ul><li><span>Tere of Busuma</span><span>b. 1076</span></li><li><span>Nana</span><span>1042&ndash;1092</span></li><li><span>Kumba of Galavy</span><span>b. 1073</span></li><li><span>Lorane</span><span>b. 1074</span></li></ul>
+        <h4>Children</h4><ul><li class=" alive"><span>Halima</span><span>b. 1059</span></li><li class=" alive"><span>Nana</span><span>b. 1071</span></li><li class=" alive"><span>Nafissa</span><span>b. 1082</span></li><li class="heir alive"><span>Gassama</span><span>b. 1095</span></li><li class=" alive"><span>Sidibé</span><span>b. 1096</span></li><li class=" alive"><span>Tekhaye</span><span>b. 1099</span></li><li class=" alive"><span>Mari-Djata</span><span>b. 1102</span></li><li class=" alive"><span>Kadi</span><span>b. 1109</span></li><li class=" alive"><span>Yatabéri</span><span>b. 1113</span></li></ul>
+        
+      </div>
+    </div>
+
+    
+    <div class="epitaph">
+      <img src="assets/icons/death_reason_death_natural.png" alt="">
+      <div>
+        <div class="lbl">Here ends the reign</div>
+        <p>He started with a village and a grudge. He left his son three crowns.</p>
+        <p class="fact">31 December 1112 &middot; aged 70 &middot; died of old age</p>
+      </div>
+    </div>
+    
+  </div>
+</article>
+
+<article class="chapter" id="ch-2">
+  <div class="ch-banner">
+    <img src="assets/art/ep2_tournament_tribal.jpg" alt="" loading="lazy">
+    <div class="ch-head"><div class="wrap">
+      <p class="ch-no">Chapter 2</p>
+      <h3>Gassama <em>of the Four Wives</em></h3>
+      <p class="reign">Reigning since 31 December 1112 &middot; 5 years</p>
+    </div></div>
+  </div>
+  <div class="wrap">
+    <p class="ch-title">The heir who married half of West Africa</p>
+    <div class="ch-body">
+      <div class="prose">
+        
+          <p class="dc">Gassama was seventeen when he inherited three kingdoms, his father's fame, and two of his father's unfinished wars. He had been raised in the faith of the Prophet since he was nine, educated in diplomacy by the old lion himself, and he had one thing his father never had: a gentle streak. The court called him compassionate. It also called him fickle, and wrathful, and both turned out to be true.</p>
+          
+          
+        
+          <p>He finished his father's wars first. Wubri of Ninise gave in by February 1113, Agor the Accursed of Minianka by March 1114. When Fuluku of Modibo tried to take Bambuk from the young king, Gassama held him off for two years and beat him in January 1116.</p>
+          
+          
+        
+          <p>But the chronicle remembers Gassama for his weddings. A week after his father died he married <strong>Kona of Gabou</strong> and <strong>Rahima of Amde</strong> on the same day. A week later he married <strong>Hawa of Lobi.</strong> In June 1114 he took a fourth wife, <strong>Ndieumbeutt of Jolof</strong>, from the very house his father had brought to its knees, and tied the Takrūr vassals to his bed as well as his throne.</p>
+          
+          
+            <blockquote class="pull">A week after his father died, he married twice in one day.</blockquote>
+          
+        
+          <p>None of these, apparently, was enough. Since he was fourteen he had been in love with Fanta of Korandje, and in February 1114 she became his lover. The nursery filled fast: Dabo in July 1114, Majan that December, Fadima in 1115, Mariam in 1116.</p>
+          
+          
+        
+          <p>He rides in tournaments. He hunts gazelle. In the autumn of 1116 he swore an oath of conquest, and in March 1117 he made good on it: a <strong>holy war against Kwiimba of Bulsa</strong> for Wagadugu, the pagan heartland to the east. Kong now counts sixty-seven counties. The axe, it seems, is still seeking splendour.</p>
+          
+          
+        
+      </div>
+      <aside class="card" aria-label="Gassama at a glance">
+        <div class="card-top">
+          <img src="assets/arms/house_3764.png" alt="">
+          <div><h4>Gassama</h4><div class="life">1095 &ndash;  &middot; aged 21</div></div>
+        </div>
+        <dl>
+          <dt>Culture</dt><dd>Bozo</dd>
+          <dt>Faith</dt><dd>Maliki</dd>
+          <dt>Titles</dt><dd>Kong, Takrūr, Kaabu, Bobo</dd>
+        </dl>
+        <div class="skills"><div class="skill" title="Diplomacy"><img src="assets/icons/icon_skills.png" alt=""><b>3</b><small>Dip</small></div><div class="skill" title="Martial"><img src="assets/icons/icon_skill_martial.png" alt=""><b>6</b><small>Mar</small></div><div class="skill" title="Stewardship"><img src="assets/icons/icon_skill_stewardship.png" alt=""><b>7</b><small>Ste</small></div><div class="skill" title="Intrigue"><img src="assets/icons/icon_skill_intrigue.png" alt=""><b>2</b><small>Int</small></div><div class="skill" title="Learning"><img src="assets/icons/icon_skill_learning.png" alt=""><b>1</b><small>Lea</small></div><div class="skill" title="Prowess"><img src="assets/icons/icon_prowess.png" alt=""><b>8</b><small>Pro</small></div></div>
+        <div class="traits"><span class="trait"><img src="assets/icons/traits_wrathful.png" alt="">Wrathful</span><span class="trait"><img src="assets/icons/traits_fickle.png" alt="">Fickle</span><span class="trait"><img src="assets/icons/traits_compassionate.png" alt="">Compassionate</span><span class="trait"><img src="assets/icons/traits_education_diplomacy_3.png" alt="">Charismatic Negotiator</span><span class="trait"><img src="assets/icons/traits_hunter.png" alt="">Hunter</span><span class="trait"><img src="assets/icons/traits_reaver.png" alt="">Pillager</span><span class="trait noicon">Child Of Concubine Female</span><span class="trait noicon">Hastiluder</span></div>
+        <div class="tally">
+          <div><b>3</b><small>Wars won</small></div>
+          <div><b>0</b><small>Battles won</small></div>
+          <div><b>4</b><small>Children</small></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ch-foot">
+      <div class="deeds">
+        <h4>Deeds of the reign</h4>
+        
+        
+        <ol><li data-k="death" class="pre"><span class="y">1096</span><i></i><span>Death of Sogolon</span></li><li data-k="ally" class="pre"><span class="y">1103</span><i></i><span>Friendship with Sidibé of Sorogoye</span></li><li data-k="faith" class="pre"><span class="y">1104</span><i></i><span>Converted from Bidaism to Sunni</span></li><li data-k="heart" class="pre"><span class="y">1109</span><i></i><span>Fell for Fanta of Korandje</span></li><li data-k="death" class=""><span class="y">1112</span><i></i><span>Death of Yatabéri of Sorogoye</span></li><li data-k="crown" class=""><span class="y">1112</span><i></i><span>Inherited the Kingdom of Kong</span></li><li data-k="ring" class=""><span class="y">1113</span><i></i><span>Married Kona of Gabou</span></li><li data-k="ring" class=""><span class="y">1113</span><i></i><span>Married Rahima of Amde</span></li><li data-k="ring" class=""><span class="y">1113</span><i></i><span>Married Hawa of Lobi</span></li><li data-k="victory" class=""><span class="y">1113</span><i></i><span>Victory over Wubri of Ninise</span></li><li data-k="shield" class=""><span class="y">1114</span><i></i><span>Attacked by Fuluku of Modibo, who wanted the County of Bambuk</span></li><li data-k="heart" class=""><span class="y">1114</span><i></i><span>Took Fanta of Korandje as a lover</span></li><li data-k="victory" class=""><span class="y">1114</span><i></i><span>Victory over Agor the Accursed of Minianka</span></li><li data-k="ring" class=""><span class="y">1114</span><i></i><span>Married Ndieumbeutt of Jolof</span></li></ol>
+        
+        <details><summary>Read all 24 deeds</summary>
+          <ol><li data-k="child" class=""><span class="y">1114</span><i></i><span>First-born Dabo</span></li><li data-k="hunt" class=""><span class="y">1114</span><i></i><span>A successful hunt (gazelle)</span></li><li data-k="child" class=""><span class="y">1114</span><i></i><span>Birth of Majan</span></li><li data-k="child" class=""><span class="y">1115</span><i></i><span>Birth of Fadima</span></li><li data-k="victory" class=""><span class="y">1116</span><i></i><span>Victory over Fuluku of Modibo</span></li><li data-k="child" class=""><span class="y">1116</span><i></i><span>Birth of Mariam</span></li><li data-k="war" class=""><span class="y">1116</span><i></i><span>Swore an oath of conquest</span></li><li data-k="rival" class=""><span class="y">1116</span><i></i><span>Rivalry with Tehpoe of Orma</span></li><li data-k="rival" class=""><span class="y">1116</span><i></i><span>Rivalry with Kabayo of Yaresnā</span></li><li data-k="war" class=""><span class="y">1117</span><i></i><span>Declared war on Kwiimba of Bulsa for the Duchy of Wagadugu</span></li></ol>
+        </details>
+        
+      </div>
+      <div class="family">
+        <h4>Spouses</h4><ul><li><span>Kona of Gabou</span><span>b. 1094</span></li><li><span>Rahima of Amde</span><span>b. 1096</span></li><li><span>Hawa of Lobi</span><span>b. 1086</span></li><li><span>Ndieumbeutt of Jolof</span><span>b. 1098</span></li></ul>
+        <h4>Children</h4><ul><li class=" alive"><span>Dabo</span><span>b. 1114</span></li><li class=" alive"><span>Majan</span><span>b. 1114</span></li><li class=" alive"><span>Fadima</span><span>b. 1115</span></li><li class=" alive"><span>Mariam</span><span>b. 1116</span></li></ul>
+        
+      </div>
+    </div>
+
+    
+    <div class="epitaph"><div><div class="lbl">The reign goes on</div><p>Twenty-one years old, four wives, four children, a holy war under way. The chronicle will have more to say.</p></div></div>
+    
+  </div>
+</article>
+
+
+
+</div>
+
+
+<section class="realm on-night" aria-label="The realm of House Sorogoye through the reigns" data-booksec="book-1">
+  <div class="wrap">
+    <div class="realm-head"><p class="kicker">House Sorogoye on the map</p><h3>The realm through the reigns</h3>
+      <p>Lands held by the house and its sworn vassals at the end of each reign, painted on the map of the world.</p></div>
+    <div class="realm-grid" data-realm>
+      <div class="realm-stick"><div class="plate realm-stack">
+        <img src="assets/maps/p1_f0.jpg" alt="Realm of House Sorogoye in 1112" class="on" data-frame="0" width="1800" height="1125" loading="lazy"><img src="assets/maps/p1_f1.jpg" alt="Realm of House Sorogoye in 1117" class="" data-frame="1" width="1800" height="1125" loading="lazy">
+      </div></div>
+      <div class="realm-steps">
+        
+        <div class="step on" data-step="0">
+          <span class="d">At the death of Yatabéri, 1112</span>
+          <h4>Yatabéri the Lame Lion</h4>
+          <p>The realm as it stood when the reign ended.</p>
+          <p class="n">44<small>counties</small></p>
+        </div>
+        <div class="step" data-step="1">
+          <span class="d">Today, 1117</span>
+          <h4>Gassama of the Four Wives</h4>
+          <p>The realm as it stands when the chronicle closes.</p>
+          <p class="n">67<small>counties</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="cover" id="book-2" style="--house: #3d6e38" data-booksec="book-2">
+  <img src="assets/art/ep2_holysite_tribal.jpg" alt="" loading="lazy">
+  <div class="cover-in wrap">
+    <p class="numeral">Book II</p>
+    <img class="shield" src="assets/arms/house_3713.png" alt="Arms of House Nri">
+    <h2>The Book of Nri</h2>
+    <p class="motto">&ldquo;Be Wise&rdquo;</p>
+    <p class="epigraph">Their motto was two words long: be wise. It took them three generations to learn what it cost.</p>
+    <p class="played">Played by Vicarius Christi</p>
+  </div>
+</section>
+
+<div class="paper" data-booksec="book-2">
+
+<section class="book-intro"><div class="wrap"><div class="prose"><p class="dc">The house of Nri kept the old Orisa ways, the shrines in the forest and the spirits in the river. In 1070 its head was already fifty years old: proud, brave, nursing every grudge he had ever been given, and with eyes going cloudy.</p><p>Nri never had Kong's appetite for war. What it had was harder to count: a court full of learning, a lord who could not stop founding things, and, in the middle of its story, a crime the chronicler still finds hard to write down.</p></div></div></section>
+
+
+
+<article class="chapter" id="ch-3">
+  <div class="ch-banner">
+    <img src="assets/art/throneroom_tribal.jpg" alt="" loading="lazy">
+    <div class="ch-head"><div class="wrap">
+      <p class="ch-no">Chapter 3</p>
+      <h3>Ìfikuánim <em>the Proud</em></h3>
+      <p class="reign">Reigned 23 September 1070 &ndash; 13 May 1085 &middot; 15 years</p>
+    </div></div>
+  </div>
+  <div class="wrap">
+    <p class="ch-title">An old man builds a duchy</p>
+    <div class="ch-body">
+      <div class="prose">
+        
+          <p class="dc">Ifikuanim was already called the Proud when the chronicle begins, and he did nothing in the following fifteen years to deserve a gentler name. He was arrogant, vengeful and brave, and he put family first. His eyes were failing and his heart was weak. None of it slowed him down.</p>
+          
+          
+        
+          <p>In 1072 he went to war for Idoma and took it from Obidiegwu within a year. In 1073 he went after Amadi of Igala, beat him in the field, and took Igala in November 1074. In February 1077, at fifty-seven, he did what no lord of Nri had done before: he <strong>proclaimed the Duchy of Igboland</strong> and set its crown on his own head.</p>
+          
+          
+        
+          <p>He was not done. Zagula the Scribe of Jukun lost Keffi to him in 1082 after a four-year war. Awudumanu of Wukari lost Kwararafa in 1084. Four wars declared, four wars won. Ifikuanim never tasted defeat.</p>
+          
+          
+            <blockquote class="pull">Four wars declared, four wars won.</blockquote>
+          
+        
+          <p>In May 1085, less than a year after his last victory, his heart gave out. He was sixty-five, and he left his son Ènweleána a duchy, a ready army, and a lifetime's supply of enemies.</p>
+          
+          
+        
+      </div>
+      <aside class="card" aria-label="Ìfikuánim at a glance">
+        <div class="card-top">
+          <img src="assets/arms/house_3713.png" alt="">
+          <div><h4>Ìfikuánim</h4><div class="life">1020 &ndash; 1085 &middot; died at 65</div></div>
+        </div>
+        <dl>
+          
+          <dt>Faith</dt><dd>Orisa</dd>
+          <dt>Titles</dt><dd>Igboland</dd>
+        </dl>
+        <div class="skills"><div class="skill" title="Diplomacy"><img src="assets/icons/icon_skills.png" alt=""><b>1</b><small>Dip</small></div><div class="skill" title="Martial"><img src="assets/icons/icon_skill_martial.png" alt=""><b>5</b><small>Mar</small></div><div class="skill" title="Stewardship"><img src="assets/icons/icon_skill_stewardship.png" alt=""><b>1</b><small>Ste</small></div><div class="skill" title="Intrigue"><img src="assets/icons/icon_skill_intrigue.png" alt=""><b>9</b><small>Int</small></div><div class="skill" title="Learning"><img src="assets/icons/icon_skill_learning.png" alt=""><b>8</b><small>Lea</small></div><div class="skill" title="Prowess"><img src="assets/icons/icon_prowess.png" alt=""><b>10</b><small>Pro</small></div></div>
+        <div class="traits"><span class="trait"><img src="assets/icons/traits_arrogant.png" alt="">Arrogant</span><span class="trait"><img src="assets/icons/traits_brave.png" alt="">Brave</span><span class="trait"><img src="assets/icons/traits_vengeful.png" alt="">Vengeful</span><span class="trait"><img src="assets/icons/traits_education_diplomacy_1.png" alt="">Naive Appeaser</span><span class="trait"><img src="assets/icons/traits_family_first.png" alt="">Family First</span><span class="trait"><img src="assets/icons/traits_military_engineer.png" alt="">Military Engineer</span><span class="trait"><img src="assets/icons/traits_faltering_heart.png" alt="">Faltering Heart</span><span class="trait"><img src="assets/icons/traits_infirm.png" alt="">Infirm</span><span class="trait"><img src="assets/icons/traits_clouded_eyes.png" alt="">Clouded Eyes</span></div>
+        <div class="tally">
+          <div><b>4</b><small>Wars won</small></div>
+          <div><b>4</b><small>Battles won</small></div>
+          <div><b>1</b><small>Children</small></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ch-foot">
+      <div class="deeds">
+        <h4>Deeds of the reign</h4>
+        <p class="battles">4 battles won.</p>
+        
+        <ol><li data-k="book" class="pre"><span class="y">1068</span><i></i><span>Finished educating Ènweleána</span></li><li data-k="war" class=""><span class="y">1072</span><i></i><span>Declared war on Obidiegwu of Idoma for the County of Idoma</span></li><li data-k="victory" class=""><span class="y">1073</span><i></i><span>Victory over Obidiegwu of Idoma &mdash; the County of Idoma won</span></li><li data-k="crown" class=""><span class="y">1073</span><i></i><span>Seized the County of Idoma from Obidiegwu of Idoma</span></li><li data-k="war" class=""><span class="y">1073</span><i></i><span>Declared war on Amadi of Igala for the County of Igala</span></li><li data-k="victory" class=""><span class="y">1074</span><i></i><span>Victory over Amadi of Igala &mdash; the County of Igala won</span></li><li data-k="crown" class=""><span class="y">1074</span><i></i><span>Seized the County of Igala from Amadi of Igala</span></li><li data-k="crown" class=""><span class="y">1077</span><i></i><span>Proclaimed the Duchy of Igboland</span></li><li data-k="war" class=""><span class="y">1078</span><i></i><span>Declared war on Zagula the Scribe of Jukun for the County of Keffi</span></li><li data-k="victory" class=""><span class="y">1082</span><i></i><span>Victory over Zagula the Scribe of Jukun &mdash; the County of Keffi won</span></li><li data-k="war" class=""><span class="y">1083</span><i></i><span>Declared war on Awudumanu of Wukari for the County of Kwararafa</span></li><li data-k="victory" class=""><span class="y">1084</span><i></i><span>Victory over Awudumanu of Wukari &mdash; the County of Kwararafa won</span></li></ol>
+        
+      </div>
+      <div class="family">
+        
+        <h4>Children</h4><ul><li class="heir dead"><span>Ènweleána</span><span>1052&ndash;1107</span></li></ul>
+        
+      </div>
+    </div>
+
+    
+    <div class="epitaph">
+      <img src="assets/icons/death_reason_death_natural.png" alt="">
+      <div>
+        <div class="lbl">Here ends the reign</div>
+        <p>The Proud made Nri a duchy. He did not live to see it become a kingdom.</p>
+        <p class="fact">13 May 1085 &middot; aged 65 &middot; died from a heart attack</p>
+      </div>
+    </div>
+    
+  </div>
+</article>
+
+<article class="chapter" id="ch-4">
+  <div class="ch-banner">
+    <img src="assets/art/bp2_nursery.jpg" alt="" loading="lazy">
+    <div class="ch-head"><div class="wrap">
+      <p class="ch-no">Chapter 4</p>
+      <h3>Ènweleána <em>the Avenger</em></h3>
+      <p class="reign">Reigned 13 May 1085 &ndash; 13 July 1107 &middot; 22 years</p>
+    </div></div>
+  </div>
+  <div class="wrap">
+    <p class="ch-title">A murdered daughter, a rebel coast, and a kingdom</p>
+    <div class="ch-body">
+      <div class="prose">
+        
+          <p class="dc">Ènweleána was a gifted man, as good at the council table as on the battlefield, and kind with it. His first wife, Chibueze of Agbala, gave him two children and died young, in 1081. The next year he married again, a commoner named Omolara. That same year he picked up a rival: <strong>Enyinnaya</strong>, a commoner of his court, fifty-three years old and bitter.</p>
+          
+          
+        
+          <p>He inherited Igboland in May 1085. In August a daughter was born to him: <strong>Oluchi.</strong> In November the court books say the rivalry with Enyinnaya was over. It was not.</p>
+          
+          
+        
+          <p>On 16 March 1086, Enyinnaya killed Oluchi. She was six months old.</p>
+          
+          
+        
+          <p>The chronicle records no trial worth the name. It records only that on 17 September 1086, six months to the day after the murder, <strong>Enyinnaya was executed by order of the lord of Igboland</strong>, and that the one man Ènweleána ever had put to death was the man who killed his child.</p>
+          
+            <figure class="figure"><img src="assets/art/gallows.jpg" alt="" loading="lazy"><blockquote>Six months to the day after the murder, the murderer hanged.</blockquote></figure>
+          
+          
+        
+          <p>The rest of his reign reads like a man refusing to be broken. He fathered two more children, Okechukwu and Ekwefi. In 1094 he won a board-game contest at a tournament held by Obinna of Calabar; two years later Obinna rose in revolt to tear his coast away. Ènweleána crushed the rising and in a single day in July 1098 <strong>threw three rebel lords into his cells.</strong> He took Bauchi in 1100, beat back Jukun's attempt to make him a vassal, and in October 1101 <strong>proclaimed the Kingdom of Igbo-Benue.</strong></p>
+          
+          
+        
+          <p>In February 1102 he became friends with Yatabéri of Kong, the old one-legged king to the west. When Jolof came for Kong, Ènweleána marched to his friend's side twice. He died of apoplexy on 13 July 1107, in the middle of the second war, at fifty-five. Far away in Kong, an old man wrote down that he had lost a friend.</p>
+          
+          
+        
+      </div>
+      <aside class="card" aria-label="Ènweleána at a glance">
+        <div class="card-top">
+          <img src="assets/arms/house_3713.png" alt="">
+          <div><h4>Ènweleána</h4><div class="life">1052 &ndash; 1107 &middot; died at 55</div></div>
+        </div>
+        <dl>
+          
+          <dt>Faith</dt><dd>Orisa</dd>
+          <dt>Titles</dt><dd>Igbo-Benue, Igboland</dd>
+        </dl>
+        <div class="skills"><div class="skill" title="Diplomacy"><img src="assets/icons/icon_skills.png" alt=""><b>10</b><small>Dip</small></div><div class="skill" title="Martial"><img src="assets/icons/icon_skill_martial.png" alt=""><b>10</b><small>Mar</small></div><div class="skill" title="Stewardship"><img src="assets/icons/icon_skill_stewardship.png" alt=""><b>8</b><small>Ste</small></div><div class="skill" title="Intrigue"><img src="assets/icons/icon_skill_intrigue.png" alt=""><b>5</b><small>Int</small></div><div class="skill" title="Learning"><img src="assets/icons/icon_skill_learning.png" alt=""><b>7</b><small>Lea</small></div><div class="skill" title="Prowess"><img src="assets/icons/icon_prowess.png" alt=""><b>0</b><small>Pro</small></div></div>
+        <div class="traits"><span class="trait"><img src="assets/icons/traits_impatient.png" alt="">Impatient</span><span class="trait"><img src="assets/icons/traits_compassionate.png" alt="">Compassionate</span><span class="trait"><img src="assets/icons/traits_temperate.png" alt="">Temperate</span><span class="trait"><img src="assets/icons/traits_education_diplomacy_1.png" alt="">Naive Appeaser</span><span class="trait noicon">Hastiluder</span></div>
+        <div class="tally">
+          <div><b>3</b><small>Wars won</small></div>
+          <div><b>0</b><small>Battles won</small></div>
+          <div><b>5</b><small>Children</small></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ch-foot">
+      <div class="deeds">
+        <h4>Deeds of the reign</h4>
+        
+        
+        <ol><li data-k="ring" class="pre"><span class="y">1078</span><i></i><span>Married Chibueze of Agbala</span></li><li data-k="child" class="pre"><span class="y">1079</span><i></i><span>First-born Chielo</span></li><li data-k="child" class="pre"><span class="y">1081</span><i></i><span>Birth of Ngozi</span></li><li data-k="death" class="pre"><span class="y">1081</span><i></i><span>Widowed: Chibueze of Agbala died</span></li><li data-k="rival" class="pre"><span class="y">1082</span><i></i><span>Rivalry with Enyinnaya</span></li><li data-k="ring" class="pre"><span class="y">1082</span><i></i><span>Married Omolara</span></li><li data-k="death" class=""><span class="y">1085</span><i></i><span>Death of Ìfikuánim the Proud of Nri</span></li><li data-k="crown" class=""><span class="y">1085</span><i></i><span>Inherited the Duchy of Igboland</span></li><li data-k="child" class=""><span class="y">1085</span><i></i><span>Birth of Oluchi</span></li><li data-k="rival" class=""><span class="y">1085</span><i></i><span>Rivalry with Enyinnaya ended</span></li><li data-k="death" class=""><span class="y">1086</span><i></i><span>Death of Oluchi of Nri</span></li><li data-k="child" class=""><span class="y">1090</span><i></i><span>Birth of Okechukwu</span></li><li data-k="child" class=""><span class="y">1093</span><i></i><span>Birth of Ekwefi</span></li><li data-k="laurel" class=""><span class="y">1094</span><i></i><span>Won a contest at a tournament hosted by Obinna of Calabar</span></li></ol>
+        
+        <details><summary>Read all 29 deeds</summary>
+          <ol><li data-k="shield" class=""><span class="y">1096</span><i></i><span>Attacked by Obinna of Calabar</span></li><li data-k="chain" class=""><span class="y">1098</span><i></i><span>Threw Obinna of Calabar into a cell</span></li><li data-k="chain" class=""><span class="y">1098</span><i></i><span>Threw Ngozi the Honorable of Idoma into a cell</span></li><li data-k="chain" class=""><span class="y">1098</span><i></i><span>Threw Onyekachi of Oguta into a cell</span></li><li data-k="victory" class=""><span class="y">1098</span><i></i><span>Victory over Obinna of Calabar</span></li><li data-k="war" class=""><span class="y">1099</span><i></i><span>Declared war on Awudumanu of Wukari for the County of Bauchi</span></li><li data-k="victory" class=""><span class="y">1100</span><i></i><span>Victory over Awudumanu of Wukari &mdash; the County of Bauchi won</span></li><li data-k="shield" class=""><span class="y">1100</span><i></i><span>Attacked by Zagula the Scribe of Jukun</span></li><li data-k="victory" class=""><span class="y">1101</span><i></i><span>Victory over Ederisu the Unready of Jukun</span></li><li data-k="crown" class=""><span class="y">1101</span><i></i><span>Proclaimed the Duchy of Kwararafa</span></li><li data-k="crown" class=""><span class="y">1101</span><i></i><span>Proclaimed the Kingdom of Igbo-Benue</span></li><li data-k="ally" class=""><span class="y">1102</span><i></i><span>Friendship with Yatabéri of Sorogoye</span></li><li data-k="war" class=""><span class="y">1103</span><i></i><span>Swore an oath of conquest</span></li><li data-k="ally" class=""><span class="y">1105</span><i></i><span>Marched to aid Yatabéri of Sorogoye against Maysa of Jolof</span></li><li data-k="ally" class=""><span class="y">1107</span><i></i><span>Marched to aid Yatabéri of Sorogoye against Maysa of Jolof</span></li></ol>
+        </details>
+        
+      </div>
+      <div class="family">
+        <h4>Spouses</h4><ul><li><span>Chibueze of Agbala</span><span>1062&ndash;1081</span></li><li><span>Omolara</span><span>1057&ndash;1110</span></li></ul>
+        <h4>Children</h4><ul><li class=" alive"><span>Chielo</span><span>b. 1079</span></li><li class=" alive"><span>Ngozi</span><span>b. 1081</span></li><li class=" murdered"><span>Oluchi</span><span>1085&ndash;1086 &dagger; murdered</span></li><li class="heir alive"><span>Okechukwu</span><span>b. 1090</span></li><li class=" alive"><span>Ekwefi</span><span>b. 1093</span></li></ul>
+        <h4>Blood on the hands</h4><ul><li><span>Enyinnaya</span><span>&dagger;</span></li></ul>
+      </div>
+    </div>
+
+    
+    <div class="epitaph">
+      <img src="assets/icons/death_reason_death_natural.png" alt="">
+      <div>
+        <div class="lbl">Here ends the reign</div>
+        <p>He buried a wife and a daughter, and executed the man who killed her. He died a king, and a friend of kings.</p>
+        <p class="fact">13 July 1107 &middot; aged 55 &middot; succumbed to fatal apoplexy</p>
+      </div>
+    </div>
+    
+  </div>
+</article>
+
+<article class="chapter" id="ch-5">
+  <div class="ch-banner">
+    <img src="assets/art/fp1_tribal_temple.jpg" alt="" loading="lazy">
+    <div class="ch-head"><div class="wrap">
+      <p class="ch-no">Chapter 5</p>
+      <h3>Okechukwu <em>the Just</em></h3>
+      <p class="reign">Reigning since 13 July 1107 &middot; 10 years</p>
+    </div></div>
+  </div>
+  <div class="wrap">
+    <p class="ch-title">The quiet king who married his enemy's daughter</p>
+    <div class="ch-body">
+      <div class="prose">
+        
+          <p class="dc">Okechukwu was the son of the second marriage, born in 1090, four years after his sister was murdered. He became king at sixteen. He is not his grandfather or his father. He is content, diligent and just, a patient man trained in intrigue, and when the court whispered, it whispered that he listened.</p>
+          
+          
+        
+          <p>His one real war was for Nupe. He declared it in 1110 against Adaugo of Jukun, the old enemy house his grandfather and father had both fought. It took two years and made Adaugo his rival for life, but in April 1112 Nupe was won.</p>
+          
+          
+        
+          <p>His mother Omolara, the commoner his father had married against the odds, died in her sleep in November 1110.</p>
+          
+          
+            <blockquote class="pull">The boy whose father died fighting beside Yatabéri married Yatabéri's daughter.</blockquote>
+          
+        
+          <p>And then, in February 1115, Okechukwu did the most important thing any lord of Nri had done in a generation. He married <strong>Tekhaye of Sorogoye</strong>, daughter of the late Yatabéri, sister of Gassama, King of Kong. The boy whose father had died fighting beside Yatabéri took Yatabéri's daughter for his wife. In March 1116 she gave him a daughter, <strong>Nkechinyere</strong>, a child with the blood of both houses.</p>
+          
+          
+        
+      </div>
+      <aside class="card" aria-label="Okechukwu at a glance">
+        <div class="card-top">
+          <img src="assets/arms/house_3713.png" alt="">
+          <div><h4>Okechukwu</h4><div class="life">1090 &ndash;  &middot; aged 26</div></div>
+        </div>
+        <dl>
+          <dt>Culture</dt><dd>Igbo</dd>
+          <dt>Faith</dt><dd>Orisa</dd>
+          <dt>Titles</dt><dd>Igbo-Benue, Igboland</dd>
+        </dl>
+        <div class="skills"><div class="skill" title="Diplomacy"><img src="assets/icons/icon_skills.png" alt=""><b>5</b><small>Dip</small></div><div class="skill" title="Martial"><img src="assets/icons/icon_skill_martial.png" alt=""><b>6</b><small>Mar</small></div><div class="skill" title="Stewardship"><img src="assets/icons/icon_skill_stewardship.png" alt=""><b>7</b><small>Ste</small></div><div class="skill" title="Intrigue"><img src="assets/icons/icon_skill_intrigue.png" alt=""><b>9</b><small>Int</small></div><div class="skill" title="Learning"><img src="assets/icons/icon_skill_learning.png" alt=""><b>5</b><small>Lea</small></div><div class="skill" title="Prowess"><img src="assets/icons/icon_prowess.png" alt=""><b>1</b><small>Pro</small></div></div>
+        <div class="traits"><span class="trait"><img src="assets/icons/traits_content.png" alt="">Content</span><span class="trait"><img src="assets/icons/traits_diligent.png" alt="">Diligent</span><span class="trait"><img src="assets/icons/traits_just.png" alt="">Just</span><span class="trait"><img src="assets/icons/traits_education_intrigue_3.png" alt="">Intricate Webweaver</span><span class="trait noicon">Hastiluder</span></div>
+        <div class="tally">
+          <div><b>1</b><small>Wars won</small></div>
+          <div><b>0</b><small>Battles won</small></div>
+          <div><b>1</b><small>Children</small></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ch-foot">
+      <div class="deeds">
+        <h4>Deeds of the reign</h4>
+        
+        
+        <ol><li data-k="heart" class="pre"><span class="y">1105</span><i></i><span>Fell for Abalihi of Calabar</span></li><li data-k="death" class=""><span class="y">1107</span><i></i><span>Death of Ènweleána of Nri</span></li><li data-k="crown" class=""><span class="y">1107</span><i></i><span>Inherited the Kingdom of Igbo-Benue</span></li><li data-k="war" class=""><span class="y">1110</span><i></i><span>Declared war on Adaugo of Jukun for the Duchy of Nupe</span></li><li data-k="death" class=""><span class="y">1110</span><i></i><span>Death of Omolara</span></li><li data-k="victory" class=""><span class="y">1112</span><i></i><span>Victory over Adaugo of Jukun &mdash; the Duchy of Nupe won</span></li><li data-k="rival" class=""><span class="y">1112</span><i></i><span>Rivalry with Adaugo of Jukun</span></li><li data-k="ring" class=""><span class="y">1115</span><i></i><span>Married Tekhaye of Sorogoye</span></li><li data-k="child" class=""><span class="y">1116</span><i></i><span>First-born Nkechinyere</span></li></ol>
+        
+      </div>
+      <div class="family">
+        <h4>Spouses</h4><ul><li><span>Tekhaye of Sorogoye</span><span>b. 1099</span></li></ul>
+        <h4>Children</h4><ul><li class=" alive"><span>Nkechinyere</span><span>b. 1116</span></li></ul>
+        
+      </div>
+    </div>
+
+    
+    <div class="epitaph"><div><div class="lbl">The reign goes on</div><p>King of Igbo-Benue, husband of a Sorogoye princess, father of a daughter of both houses. His story is still being written.</p></div></div>
+    
+  </div>
+</article>
+
+
+
+</div>
+
+
+<section class="realm on-night" aria-label="The realm of House Nri through the reigns" data-booksec="book-2">
+  <div class="wrap">
+    <div class="realm-head"><p class="kicker">House Nri on the map</p><h3>The realm through the reigns</h3>
+      <p>Lands held by the house and its sworn vassals at the end of each reign, painted on the map of the world.</p></div>
+    <div class="realm-grid" data-realm>
+      <div class="realm-stick"><div class="plate realm-stack">
+        <img src="assets/maps/p2_f0.jpg" alt="Realm of House Nri in 1085" class="on" data-frame="0" width="1800" height="1125" loading="lazy"><img src="assets/maps/p2_f1.jpg" alt="Realm of House Nri in 1107" class="" data-frame="1" width="1800" height="1125" loading="lazy"><img src="assets/maps/p2_f2.jpg" alt="Realm of House Nri in 1117" class="" data-frame="2" width="1800" height="1125" loading="lazy">
+      </div></div>
+      <div class="realm-steps">
+        
+        <div class="step on" data-step="0">
+          <span class="d">At the death of Ìfikuánim, 1085</span>
+          <h4>Ìfikuánim the Proud</h4>
+          <p>The realm as it stood when the reign ended.</p>
+          <p class="n">7<small>counties</small></p>
+        </div>
+        <div class="step" data-step="1">
+          <span class="d">At the death of Ènweleána, 1107</span>
+          <h4>Ènweleána the Avenger</h4>
+          <p>The realm as it stood when the reign ended.</p>
+          <p class="n">12<small>counties</small></p>
+        </div>
+        <div class="step" data-step="2">
+          <span class="d">Today, 1117</span>
+          <h4>Okechukwu the Just</h4>
+          <p>The realm as it stands when the chronicle closes.</p>
+          <p class="n">12<small>counties</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="interlude">
+  <img src="assets/art/fp1_throneroom_tribal.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <div class="duo"><img src="assets/arms/house_3764.png" alt="Arms of House Sorogoye"><i></i><img src="assets/arms/house_3713.png" alt="Arms of House Nri"></div>
+    <p class="kicker">Interlude &middot; 1100 – 1116</p>
+    <h3>The pact of the two kings</h3>
+    <div class="prose"><p class="dc">Kong and Nri never once went to war with each other. In fifty years of the chronicle that is rarer than it sounds.</p><p>It began in July 1100, when Yatabéri marched east to help Ènweleána against Zagula the Scribe of Jukun. Two years later, in February 1102, the court books of both kingdoms record the same thing on the same day: <strong>the two kings had become friends.</strong></p><p>The debt was repaid in full. When Maysa of Jolof came for Kong in 1105, Nri's spears came west. When Yatabéri struck back in 1107, Ènweleána joined him again, and died in the middle of that war, far from home, fighting for his friend. In Kong, Yatabéri wrote down the death.</p><p>Eight years later the friendship became blood. In February 1115, <strong>Tekhaye of Sorogoye</strong>, Yatabéri's daughter, married <strong>Okechukwu of Nri</strong>, Ènweleána's son. Their daughter Nkechinyere was born in March 1116, the granddaughter of both kings. Whatever happens next between the Axe and the Wise, she will be part of it.</p></div>
+  </div>
+</section>
+
+
+<section class="cover" id="book-3" style="--house: #2d4f86" data-booksec="book-3">
+  <img src="assets/art/tgp_japanese_city.jpg" alt="" loading="lazy">
+  <div class="cover-in wrap">
+    <p class="numeral">Book III</p>
+    <img class="shield" src="assets/arms/house_12344.png" alt="Arms of House Satsuma">
+    <h2>The Book of Satsuma</h2>
+    <p class="motto">&ldquo;Through Fidelity, Eternal Renown&rdquo;</p>
+    <p class="epigraph">Some lords leave the chronicle in battle. One left it by not coming back.</p>
+    <p class="played">Played by YeaYa &middot; departed the game</p>
+  </div>
+</section>
+
+<div class="paper" data-booksec="book-3">
+
+<section class="book-intro"><div class="wrap"><div class="prose"><p class="dc">Far to the east, on the island of Kyūshū, a branch of the great house of Taira held Satsuma. Its lord in 1070 was already an old man by the standards of his age, and his story is the shortest in this book.</p></div></div></section>
+
+
+
+<article class="chapter" id="ch-6">
+  <div class="ch-banner">
+    <img src="assets/art/tgp_japan_throne_room.jpg" alt="" loading="lazy">
+    <div class="ch-head"><div class="wrap">
+      <p class="ch-no">Chapter 6</p>
+      <h3>Kanesuke <em>the Absent</em></h3>
+      <p class="reign">Reigned 23 September 1070 &ndash; 8 May 1083 &middot; 13 years</p>
+    </div></div>
+  </div>
+  <div class="wrap">
+    <p class="ch-title">Three years of play, and a long silence</p>
+    <div class="ch-body">
+      <div class="prose">
+        
+          <p class="dc">Kanesuke was fifty-five when the chronicle reached him: greedy and wrathful, an administrator by training and a traveller by habit, with brittle bones, a faltering heart and a mind already starting to wander. He had married a commoner, Yasuko, twenty-one years his junior, in 1066, and she had given him a son, Tamenaka, the following year.</p>
+          
+          
+        
+          <p>He did one thing with real energy. In November 1071 he pressed his claim on Ōsumi against Kanetsune of Kimotsuki, and a year later he won, and Ōsumi was Satsuma's. In 1073 he travelled to watch Tadatsuna the Poet, of the great Fujiwara house, crowned.</p>
+          
+          
+            <blockquote class="pull">And then the hand on the threads let go.</blockquote>
+          
+        
+          <p>And then the hand on the threads let go. The lord of Satsuma stopped making choices, and his house went on without him. He died of a heart attack in May 1083, at sixty-eight. Yasuko outlived him four years and died in the grip of madness. His sons followed in their turn, one of apoplexy, one in his sleep, one after a stumble broke his fragile bones. The Taira of Satsuma are still there. Nobody is playing them.</p>
+          
+          
+        
+      </div>
+      <aside class="card" aria-label="Kanesuke at a glance">
+        <div class="card-top">
+          <img src="assets/arms/house_12344.png" alt="">
+          <div><h4>Kanesuke</h4><div class="life">1015 &ndash; 1083 &middot; died at 68</div></div>
+        </div>
+        <dl>
+          
+          <dt>Faith</dt><dd>Mantrayana</dd>
+          
+        </dl>
+        <div class="skills"><div class="skill" title="Diplomacy"><img src="assets/icons/icon_skills.png" alt=""><b>5</b><small>Dip</small></div><div class="skill" title="Martial"><img src="assets/icons/icon_skill_martial.png" alt=""><b>0</b><small>Mar</small></div><div class="skill" title="Stewardship"><img src="assets/icons/icon_skill_stewardship.png" alt=""><b>3</b><small>Ste</small></div><div class="skill" title="Intrigue"><img src="assets/icons/icon_skill_intrigue.png" alt=""><b>4</b><small>Int</small></div><div class="skill" title="Learning"><img src="assets/icons/icon_skill_learning.png" alt=""><b>2</b><small>Lea</small></div><div class="skill" title="Prowess"><img src="assets/icons/icon_prowess.png" alt=""><b>10</b><small>Pro</small></div></div>
+        <div class="traits"><span class="trait"><img src="assets/icons/traits_greedy.png" alt="">Greedy</span><span class="trait"><img src="assets/icons/traits_wrathful.png" alt="">Wrathful</span><span class="trait"><img src="assets/icons/traits_content.png" alt="">Content</span><span class="trait"><img src="assets/icons/traits_education_stewardship_2.png" alt="">Thrifty Clerk</span><span class="trait"><img src="assets/icons/traits_administrator.png" alt="">Administrator</span><span class="trait"><img src="assets/icons/traits_traveler.png" alt="">Lifestyle Traveler</span><span class="trait"><img src="assets/icons/traits_fragile_bones.png" alt="">Fragile Bones</span><span class="trait"><img src="assets/icons/traits_faltering_heart.png" alt="">Faltering Heart</span><span class="trait"><img src="assets/icons/traits_infirm.png" alt="">Infirm</span><span class="trait"><img src="assets/icons/traits_withering_mind.png" alt="">Withering Mind</span></div>
+        <div class="tally">
+          <div><b>1</b><small>Wars won</small></div>
+          <div><b>0</b><small>Battles won</small></div>
+          <div><b>3</b><small>Children</small></div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="ch-foot">
+      <div class="deeds">
+        <h4>Deeds of the reign</h4>
+        
+        
+        <ol><li data-k="ring" class="pre"><span class="y">1066</span><i></i><span>Married Yasuko</span></li><li data-k="child" class="pre"><span class="y">1067</span><i></i><span>Birth of Tamenaka</span></li><li data-k="ally" class="pre"><span class="y">1068</span><i></i><span>Marched to aid Tsunenaga the Trickster of Bōsō against Tsunenao of ONCLICK:DYNASTY_HOUSE,12322 TOOLTIP:DYNASTY_HOUSE,12322 L; Bōsō!!!</span></li><li data-k="death" class="pre"><span class="y">1069</span><i></i><span>Death of Motoko of Satsuma</span></li><li data-k="war" class=""><span class="y">1071</span><i></i><span>Declared war on Kanetsune of Kimotsuki for the County of Ōsumi</span></li><li data-k="victory" class=""><span class="y">1072</span><i></i><span>Victory over Kanetsune of Kimotsuki &mdash; the County of Ōsumi won</span></li><li data-k="crown" class=""><span class="y">1072</span><i></i><span>Seized the County of Ōsumi from Kanetsune of Kimotsuki</span></li><li data-k="crown" class=""><span class="y">1073</span><i></i><span>Attended the coronation of Tadatsuna the Poet of Fujiwara</span></li></ol>
+        
+      </div>
+      <div class="family">
+        <h4>Spouses</h4><ul><li><span>Yasuko</span><span>1036&ndash;1087</span></li></ul>
+        <h4>Children</h4><ul><li class=" dead"><span>Kaneshige</span><span>1046&ndash;1106</span></li><li class=" dead"><span>Yoshitada</span><span>1050&ndash;1116</span></li><li class=" dead"><span>Tamenaka</span><span>1067&ndash;1111</span></li></ul>
+        
+      </div>
+    </div>
+
+    
+    <div class="epitaph">
+      <img src="assets/icons/death_reason_death_natural.png" alt="">
+      <div>
+        <div class="lbl">Here ends the reign</div>
+        <p>One war, one coronation, one long silence.</p>
+        <p class="fact">8 May 1083 &middot; aged 68 &middot; died from a heart attack</p>
+      </div>
+    </div>
+    
+  </div>
+</article>
+
+
+
+</div>
+
+
+<section class="realm on-night" aria-label="The realm of House Satsuma through the reigns" data-booksec="book-3">
+  <div class="wrap">
+    <div class="realm-head"><p class="kicker">House Satsuma on the map</p><h3>The realm through the reigns</h3>
+      <p>Lands held by the house and its sworn vassals at the end of each reign, painted on the map of the world.</p></div>
+    <div class="realm-grid" data-realm>
+      <div class="realm-stick"><div class="plate realm-stack">
+        <img src="assets/maps/p0_f0.jpg" alt="Realm of House Satsuma in 1083" class="on" data-frame="0" width="1800" height="1126" loading="lazy">
+      </div></div>
+      <div class="realm-steps">
+        
+        <div class="step on" data-step="0">
+          <span class="d">At the death of Kanesuke, 1083</span>
+          <h4>Kanesuke the Absent</h4>
+          <p>The realm as it stood when the reign ended.</p>
+          <p class="n">2<small>counties</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<section class="epilogue-top" id="epilogue" data-booksec="epilogue">
+  <img src="assets/art/fp4_legendary_battlefield.jpg" alt="" loading="lazy">
+  <div class="wrap"><p class="kicker">Epilogue &middot; 10 April 1117</p><h2>The world in 1117</h2></div>
+</section>
+<section class="epilogue-text paper"><div class="wrap"><div class="prose"><p class="dc">On 10 April 1117 the chronicle pauses. Kong stretches from the Atlantic coast deep into the Sahel, sixty-seven counties under a Muslim king with four wives and a holy war under way in the east. Igbo-Benue holds the delta and the river country, ruled by a just young king whose wife is the sister of the king of Kong.</p><p>In Satsuma the Taira go on without their lord, as they will go on without the chronicle.</p><p>Yatabéri's empire was built by the sword. His son is keeping it with marriages, and his daughter has carried it east into the house of Nri. Whether the granddaughter of two kings will one day unite the Axe and the Wise, or set them at each other's throats, belongs to the next chapter of this game.</p></div></div></section>
+
+<section class="awards on-night" aria-labelledby="awards-h">
+  <div class="wrap">
+    <p class="kicker">The chronicler&rsquo;s judgement</p>
+    <h2 id="awards-h">Honours of the chronicle</h2>
+    <div class="award-grid">
+      <div class="award"><img src="assets/arms/house_3764.png" alt=""><div class="t">The Hammer of the Sahel</div><div class="w">Yatabéri of Sorogoye</div><p>Nineteen offensive wars in forty-two years, and only one war ever lost. Took Bobo, Kong, Takrūr and a slice of Mali, on one leg.</p></div><div class="award"><img src="assets/arms/house_3713.png" alt=""><div class="t">The Avenger</div><div class="w">Ènweleána of Nri</div><p>Executed the man who murdered his six-month-old daughter, six months to the day after the crime. The only man he ever put to death.</p></div><div class="award"><img src="assets/arms/house_3764.png" alt=""><div class="t">The Bridegroom</div><div class="w">Gassama of Sorogoye</div><p>Four wives in eighteen months, two of them on the same day, a week after his father died. Plus a lover since childhood.</p></div><div class="award"><img src="assets/arms/house_3713.png" alt=""><div class="t">Never Defeated</div><div class="w">Ìfikuánim the Proud of Nri</div><p>Four wars declared, four wars won. Founded the Duchy of Igboland at fifty-seven with clouded eyes and a failing heart.</p></div><div class="award"><img src="assets/arms/house_3713.png" alt=""><div class="t">The Peacemaker</div><div class="w">Okechukwu of Nri</div><p>Married the daughter of his father's best friend and joined the two greatest houses of West Africa in a single cradle.</p></div><div class="award"><img src="assets/arms/house_12344.png" alt=""><div class="t">The Absent Lord</div><div class="w">Kanesuke of Satsuma</div><p>Won one war, watched one coronation, and walked out of the game in 1073. His house is still waiting for him.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="ledger on-night" aria-labelledby="ledger-h">
+  <div class="wrap">
+    <h3 id="ledger-h">The ledger of houses</h3>
+    <div class="ledger-scroll"><table>
+      <thead><tr><th>House</th><th>Rulers</th><th>Counties</th><th>Wars won</th><th>Wars lost</th><th>Battles won</th><th>Children</th></tr></thead>
+      <tbody><tr><td><div class="h"><img src="assets/arms/house_3764.png" alt="">Sorogoye</div><div class="st">the Lord of Kong &middot; still ruling</div></td><td>2</td><td>67</td><td>23</td><td>1</td><td>34</td><td>13</td></tr><tr><td><div class="h"><img src="assets/arms/house_3713.png" alt="">Nri</div><div class="st">Vicarius Christi &middot; still ruling</div></td><td>3</td><td>12</td><td>8</td><td>0</td><td>4</td><td>7</td></tr><tr><td><div class="h"><img src="assets/arms/house_12344.png" alt="">Satsuma</div><div class="st">YeaYa &middot; departed</div></td><td>1</td><td>2</td><td>1</td><td>0</td><td>0</td><td>3</td></tr></tbody>
+    </table></div>
+  </div>
+</section>
+</main>
+
+<footer class="on-night">
+  <div class="wrap">
+    <span>Compiled from the save <em>Maghan_Gassama_of_Kong_1117_04_07.ck3</em> &middot; game version 1.21.0.3</span>
+    <span>Art, arms and map: Crusader Kings III &copy; Paradox Interactive. A private chronicle for the players.</span>
+  </div>
+</footer>
+
+<script>
+(() => {
+  // nav appears after the hero; marks the book in view
+  const nav = document.querySelector('.booknav');
+  const hero = document.querySelector('.hero');
+  new IntersectionObserver(([e]) => nav.classList.toggle('show', !e.isIntersecting), { threshold: 0.05 }).observe(hero);
+  const links = [...document.querySelectorAll('.booknav a.bk')];
+  const secObs = new IntersectionObserver((ents) => {
+    ents.forEach(e => {
+      if (!e.isIntersecting) return;
+      const id = e.target.dataset.booksec;
+      links.forEach(a => a.classList.toggle('on', a.dataset.book === id));
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  document.querySelectorAll('[data-booksec]').forEach(s => secObs.observe(s));
+
+  // the realm map follows the reign in view
+  document.querySelectorAll('[data-realm]').forEach(grid => {
+    const frames = [...grid.querySelectorAll('[data-frame]')];
+    const steps = [...grid.querySelectorAll('[data-step]')];
+    const io = new IntersectionObserver((ents) => {
+      ents.forEach(e => {
+        if (!e.isIntersecting) return;
+        const k = e.target.dataset.step;
+        steps.forEach(s => s.classList.toggle('on', s.dataset.step === k));
+        frames.forEach(f => f.classList.toggle('on', f.dataset.frame === k));
+      });
+    }, { rootMargin: '-45% 0px -45% 0px' });
+    steps.forEach(s => io.observe(s));
+    // eager-load the frames once the section is near, so the crossfade never blinks
+    new IntersectionObserver(([e], o) => { if (e.isIntersecting) { frames.forEach(f => f.loading = 'eager'); o.disconnect(); } }, { rootMargin: '600px' }).observe(grid);
+  });
+})();
+</script>
+</body>
+</html>
